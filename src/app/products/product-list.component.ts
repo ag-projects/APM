@@ -6,6 +6,10 @@ import { Component } from "@angular/core";
 })
 export class productListComponent {
     pageTitle: string ='Product List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
+    showImage: boolean = false;
+    listFilter: string = 'cart';
     products: any = [
         {
             "productId":2,
@@ -15,7 +19,7 @@ export class productListComponent {
             "description": "15 Gallon capacity rolling",
             "price": 32.99,
             "starRating": 4.2,
-            "imageUrl": "https://www.homedepot.com/p/BEHR-Premium-Plus-1-gal-Ultra-Pure-White-Semi-Gloss-Enamel-Zero-VOC-Interior-Paint-and-Primer-in-One-305001/202761530"
+            "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
         },
         {
             "productId":5,
@@ -25,6 +29,10 @@ export class productListComponent {
             "description": "Curved Steel Hammer",
             "price": 8.99,
             "starRating": 4.8,
-            "imageUrl": "https://www.homedepot.com/p/DEWALT-20-oz-Hammer-DWHT51054/205594063"
+            "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
         }];
+
+        toggleImage(): void {
+            this.showImage = !this.showImage;
+        }
 }
